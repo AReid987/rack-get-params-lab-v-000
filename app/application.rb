@@ -26,7 +26,7 @@ class Application
       if @@items.include?(req.params["item"]
         @@cart << req.params["item"]
         resp.write "added #{req.params["item"]}"
-      elsif !@@items.include?(req.params["item"]
+      elsif !@@items.include?(req.params["item"])
         resp.write "We don't have that item"
       end
       #binding.pry
