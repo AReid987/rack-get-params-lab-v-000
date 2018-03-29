@@ -44,8 +44,8 @@ class Application
     if @@cart.size == 0
       return "Your cart is empty"
     elsif @@cart.size > 0
-      @@cart.each do |item|
-         "#{item}".join("\n")
+      @@cart.collect do |item|
+         "#{item}\n".
       end
     end
   end
