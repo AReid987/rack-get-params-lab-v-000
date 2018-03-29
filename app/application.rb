@@ -16,7 +16,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
       path = /cart/
-      resp.write cart_list(path)
+      cart_list(path)
     elsif req.path.match(/add/)
       if @@items.include?(req.params["item"])
         @@cart << req.params["item"]
@@ -44,8 +44,8 @@ class Application
     if @@cart.size == 0
       return "Your cart is empty"
     elsif @@cart.size > 0
-      @@cart.collect do |item|
-         "#{item}"
+      @@cart.each do |item|
+        resp.write "#{item}\n"
       end
     end
   end
