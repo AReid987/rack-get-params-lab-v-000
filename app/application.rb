@@ -45,7 +45,7 @@ class Application
       return "Your cart is empty"
     elsif @@cart.size > 0
       @@cart.each do |item|
-        return "#{item}\n"
+         "#{item}\n"
       end
     end
   end
