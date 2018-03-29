@@ -41,5 +41,12 @@ class Application
   end
 
   def cart_list
+    if @@cart.size == 0
+      resp.write "Your cart is empty"
+    elsif @@cart.size > 0
+      @@cart.each do |item|
+        resp.write "#{item}\n"
+      end
+    end
   end
 end
