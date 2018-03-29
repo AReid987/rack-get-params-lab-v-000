@@ -39,7 +39,7 @@ class Application
     end
   end
 
-  def cart_list
+  def cart_list(cart_path)
     if @@cart.size == 0
       return "Your cart is empty"
     elsif @@cart.size > 0
