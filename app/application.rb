@@ -28,7 +28,7 @@ class Application
         resp.write "added #{req.params["item"]}"
       elsif !@@items.include?(req.params["item"]
         resp.write "We don't have that item"
-      binding.pry
+      #binding.pry
     else
       resp.write "Path Not Found"
     end
