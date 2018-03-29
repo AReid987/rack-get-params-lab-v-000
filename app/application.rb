@@ -16,6 +16,10 @@ class Application
     elsif req.path.match(/cart/)
       if @@cart.size == 0
         resp.write "Your cart is empty"
+      elsif @@cart.size > 0
+        @@cart.each do |item|
+          resp.write "#{item}\n"
+        end
       end
     else
       resp.write "Path Not Found"
