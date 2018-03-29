@@ -16,7 +16,6 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
       cart_list
-      end
     elsif req.path.match(/add/)
       if @@items.include?(req.params["item"])
         @@cart << req.params["item"]
