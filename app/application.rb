@@ -41,10 +41,10 @@ class Application
 
   def cart_list
     if @@cart.size == 0
-      resp.write "Your cart is empty"
+      return "Your cart is empty"
     elsif @@cart.size > 0
       @@cart.each do |item|
-        resp.write "#{item}\n"
+        return "#{item}\n"
       end
     end
   end
